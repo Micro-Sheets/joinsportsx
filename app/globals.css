@@ -1,26 +1,19 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0B0B0E; /* Dark background */
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.gold-text {
+  color: #D4AF37; /* Gold text */
+}
+
+.gold-btn {
+  background: linear-gradient(90deg, #D4AF37, #F5D76E);
+  color: black;
+  font-weight: 600;
 }
