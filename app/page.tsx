@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import IndexCard from "../components/IndexCard"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
@@ -44,19 +44,4 @@ export default function Home() {
       <Footer />
     </>
   )
-}
-
-
-import Hero from "@/components/Hero";
-import IndexCards from "@/components/IndexCards";
-import LiveTicker from "@/components/LiveTicker";
-
-export default function Home() {
-  return (
-    <>
-      <Hero />
-      <IndexCards />
-      <LiveTicker />
-    </>
-  );
 }
