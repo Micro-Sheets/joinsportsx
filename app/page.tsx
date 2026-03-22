@@ -1,75 +1,158 @@
-import Navbar from "../components/Navbar"
-import HeroSection from "../components/HeroSection"
-import IndexCard from "../components/IndexCard"
-import Footer from "../components/Footer"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsX - Sports Performance Exchange</title>
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(to bottom, #ffd700, #b8860b);
+            --dark-bg: #050505;
+            --accent-orange: #ff4500;
+            --card-bg: rgba(20, 20, 20, 0.9);
+        }
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif; /* Recommended for sports-tech look */
+            margin: 0;
+            text-align: center;
+        }
 
-      <HeroSection />
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: #000;
+            border-bottom: 1px solid #333;
+        }
 
-      <section className="px-10 py-20 bg-darkBg">
-        <h2 className="text-3xl text-center font-bold mb-12 uppercase">
-          Trade Performance Indexes
-        </h2>
+        .logo { color: var(--gold-gradient); font-weight: bold; font-size: 1.5rem; }
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <IndexCard
-            title="SX-NBA INDEX"
-            description="Trade player, team, and coach performance from professional basketball."
-          />
-          <IndexCard
-            title="SX-ESPORTS INDEX"
-            description="Trade structured performance indexes across elite esports."
-          />
-          <IndexCard
-            title="Performance Mechanics"
-            description="Rolling baselines. Objective metrics. Daily index settlements."
-          />
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            background: radial-gradient(circle, rgba(255,140,0,0.15) 0%, rgba(0,0,0,1) 70%);
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; color: #fff; letter-spacing: 2px; }
+        .hero h2 { color: #f39c12; margin-top: 5px; }
+
+        .btn-gold {
+            background: linear-gradient(45deg, #d35400, #f39c12);
+            border: none;
+            padding: 12px 30px;
+            color: #000;
+            font-weight: 800;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 3px;
+        }
+
+        /* Performance Grid Section */
+        .section-header {
+            border-top: 1px solid #444;
+            border-bottom: 1px solid #444;
+            padding: 15px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 4px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #f39c12;
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+        }
+
+        .card h3 { color: #fff; margin-bottom: 5px; }
+        .card .subtext { color: #888; font-size: 0.8rem; }
+        
+        .status-tag {
+            color: #f39c12;
+            font-size: 0.7rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Ticker Bar */
+        .ticker {
+            background: #000;
+            padding: 10px;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SPORTSX</div>
+        <div class="nav-links">Home &nbsp; Leaderboards &nbsp; Leagues &nbsp; <button class="btn-gold" style="padding: 5px 15px;">Login</button></div>
+    </nav>
+
+    <div class="hero">
+        <h1>SPORTSX - THE FIRST MULTI-LEAGUE</h1>
+        <h2>SPORTS PERFORMANCE EXCHANGE</h2>
+        <p>Trade structured performance indexes. Build your sports portfolio.</p>
+        <button class="btn-gold">CREATE FREE ACCOUNT</button>
+        <button class="btn-gold" style="background: #111; color: #fff; border: 1px solid #444;">VIEW LIVE INDEXES</button>
+    </div>
+
+    <div class="section-header">LIVE INDEX PERFORMANCE</div>
+    
+    <div class="grid-container">
+        <div class="card">
+            <h3>SX-NBA</h3>
+            <span class="subtext">INDEX</span>
         </div>
-      </section>
+        <div class="card">
+            <h3>SX-ESPORTS</h3>
+            <span class="subtext">INDEX</span>
+        </div>
+        <div class="card">
+            <h3>SX-NFL</h3>
+            <span class="subtext">INDEX</span>
+        </div>
+    </div>
 
-      <section className="text-center py-20 bg-black">
-        <h2 className="text-3xl font-bold uppercase mb-6">
-          Join the Exchange. Build Your Portfolio. Climb the Rankings.
-        </h2>
+    <div class="ticker">
+        LIVE INDEX PERFORMANCE: <span style="color: #00ff00;">SX-NBA +18.82%</span> | <span style="color: #00ff00;">SX-ESPORTS +12.47%</span> | <span style="color: #ff0000;">SX-15.80%</span>
+    </div>
 
-        <button className="gold-btn px-10 py-4 rounded text-lg">
-          Get Started
-        </button>
-      </section>
+    <div class="section-header" style="margin-top: 40px;">TRADE PERFORMANCE INDEXES</div>
 
-      <Footer />
-    </>
-  )
-}
-import Image from 'next/image'
+    <div class="grid-container">
+        <div class="card">
+            <h3>Pro Football</h3>
+            <span class="status-tag">(COMING SOON)</span>
+        </div>
+        <div class="card">
+            <h3>Pro Baseball</h3>
+            <span class="status-tag">(COMING SOON)</span>
+        </div>
+        <div class="card">
+            <h3>Global Soccer</h3>
+            <span class="status-tag">(FUTURE)</span>
+        </div>
+    </div>
 
-export default function Footer() {
-  return (
-    <footer className="bg-black border-t border-gold mt-16 px-8 py-10 text-center text-sm text-gray-400">
-      <div className="mb-6">
-        <p>
-          SportsX is a subscription-based virtual performance analytics platform.
-        </p>
-        <p>
-          No real-money wagering or gambling occurs on this platform.
-        </p>
-        <p>
-          All allocations are virtual and for entertainment and analytical purposes only.
-        </p>
-      </div>
-
-      <div className="flex justify-center items-center gap-4 mb-4">
-        <Image src="/microsheets-logo.png" alt="The Micro-Sheets Company" width={120} height={60} />
-        <p className="text-white">
-          SportsX is proudly owned and operated by The Micro-Sheets™ Company.
-        </p>
-      </div>
-
-      <p>© 2024 The Micro-Sheets™ Company. All Rights Reserved.</p>
-    </footer>
-  )
-}
+</body>
+</html>
