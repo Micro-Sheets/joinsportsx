@@ -4,50 +4,49 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        {/* Logo */}
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        
-        {/* Main Title */}
+        {/* Main Banner */}
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+          <h1 className="text-6xl font-semibold leading-12 text-black dark:text-zinc-50">
             SPORTSX - THE FIRST MULTI-LEAGUE SPORTS PERFORMANCE EXCHANGE
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Trade structured performance indexes. Build your sports portfolio. Compete and climb the leaderboards.
+          <p className="text-lg text-zinc-600 dark:text-zinc-400">
+            Trade structured performance indexes. Build your sports portfolio.
+            Compete and climb the leaderboards.
           </p>
+
+          {/* Buttons */}
+          <div className="mt-6 space-x-4">
+            <a
+              href="#"
+              className="px-8 py-3 text-lg font-semibold text-white bg-yellow-500 hover:bg-yellow-600 rounded-full"
+            >
+              CREATE FREE ACCOUNT
+            </a>
+            <a
+              href="#"
+              className="px-8 py-3 text-lg font-semibold text-white bg-green-500 hover:bg-green-600 rounded-full"
+            >
+              VIEW LIVE INDEXES
+            </a>
+          </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex gap-4">
-          <a
-            href="#"
-            className="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
-          >
-            CREATE FREE ACCOUNT
-          </a>
-          <a
-            href="#"
-            className="inline-block px-6 py-3 text-lg font-semibold text-white bg-green-600 rounded-lg hover:bg-green-700"
-          >
-            VIEW LIVE INDEXES
-          </a>
-        </div>
-
-        {/* Live Index Section */}
-        <div className="py-16 px-10 bg-gray-800 text-white text-center">
+        {/* Live Indexes Section */}
+        <div className="py-16 bg-gray-900 text-white text-center">
           <h2 className="text-3xl font-semibold">LIVE INDEX PERFORMANCE</h2>
-          <div className="flex justify-center space-x-4 mt-6">
-            <button className="bg-orange-500 p-4 rounded-md">SX-NBA INDEX</button>
-            <button className="bg-yellow-500 p-4 rounded-md">SX-ESPORTS INDEX</button>
-            <button className="bg-red-500 p-4 rounded-md">SX-NFL INDEX</button>
-            <button className="bg-green-500 p-4 rounded-md">SX-BASEBALL INDEX</button>
+          <div className="flex justify-center space-x-8 mt-6">
+            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-full">
+              SX-NBA INDEX
+            </button>
+            <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 rounded-full">
+              SX-ESPORTS INDEX
+            </button>
+            <button className="px-6 py-3 bg-red-500 hover:bg-red-600 rounded-full">
+              SX-NFL INDEX
+            </button>
+            <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-full">
+              SX-BASEBALL INDEX
+            </button>
           </div>
         </div>
 
@@ -58,31 +57,50 @@ export default function Home() {
           <p className="mt-2">We expand league-by-league as the exchange grows.</p>
 
           <div className="flex justify-center gap-8 mt-8">
-            <button className="bg-blue-500 p-4 rounded-md">Pro Football (COMING SOON)</button>
-            <button className="bg-green-500 p-4 rounded-md">Pro Baseball (COMING SOON)</button>
-            <button className="bg-yellow-500 p-4 rounded-md">Pro Hockey (COMING SOON)</button>
-            <button className="bg-orange-500 p-4 rounded-md">Global Soccer (Future)</button>
+            <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full">
+              Pro Football (COMING SOON)
+            </button>
+            <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-full">
+              Pro Baseball (COMING SOON)
+            </button>
+            <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 rounded-full">
+              Pro Hockey (COMING SOON)
+            </button>
+            <button className="px-6 py-3 bg-purple-500 hover:bg-purple-600 rounded-full">
+              Global Soccer (Future)
+            </button>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="text-center py-16 px-10 bg-black text-white">
-          <h3 className="text-2xl font-semibold">JOIN THE EXCHANGE, BUILD YOUR PORTFOLIO, CLIMB THE RANKINGS.</h3>
+        <div className="py-16 px-10 bg-black text-white text-center">
+          <h3 className="text-2xl font-semibold">
+            JOIN THE EXCHANGE, BUILD YOUR PORTFOLIO, CLIMB THE RANKINGS.
+          </h3>
           <a
             href="#"
-            className="mt-4 inline-block px-6 py-3 text-lg font-semibold text-white bg-yellow-500 rounded-lg hover:bg-yellow-600"
+            className="mt-6 inline-block px-8 py-3 text-lg font-semibold text-white bg-yellow-500 hover:bg-yellow-600 rounded-full"
           >
             GET STARTED
           </a>
 
           <div className="mt-6">
-            <p className="text-md text-gray-300">SportsX is a subscription-based virtual performance analytics platform.</p>
-            <p className="text-md text-gray-300">No real money wagering or gambling occurs on this platform.</p>
+            <p className="text-md text-gray-300">
+              SportsX is a subscription-based virtual performance analytics
+              platform.
+            </p>
+            <p className="text-md text-gray-300">
+              No real money wagering or gambling occurs on this platform.
+            </p>
           </div>
 
           <div className="mt-10">
-            <p className="text-md text-gray-500">SportsX is proudly owned and operated by The Micro-Sheets Company.</p>
-            <p className="text-sm text-gray-500">© 2024 The Micro-Sheets Company. All Rights Reserved.</p>
+            <p className="text-md text-gray-500">
+              SportsX is proudly owned and operated by The Micro-Sheets Company.
+            </p>
+            <p className="text-sm text-gray-500">
+              © 2024 The Micro-Sheets Company. All Rights Reserved.
+            </p>
           </div>
         </div>
       </main>
